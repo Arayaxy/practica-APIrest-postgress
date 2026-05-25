@@ -1,5 +1,5 @@
 const express = require('express')
-const dbConect = require('./utils/mongoConect')
+const pool = require('./config/configpull')
 
 
 require('dotenv').config()
