@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000
 
 const app = express()
 
-pool.query('SELECT NOW()', (Error, result) => {
+pool.query('SELECT NOW()', (error, result) => {
     if (error) {
         console.log('falla la conexion postgres', error);
         return

@@ -15,7 +15,7 @@ const traerTodosLosClientes = (req, res) => {
     res.status(200).json(
         {
             ok: true,
-            msg: 'obteniendo servicios'
+            msg: 'obteniendo clientes'
         }
     )
 
@@ -156,11 +156,11 @@ const eliminarUnClientePorid= (req, res) => {
 
 
 module.exports = {
-    traerTodosLosServicios,
-    traerUnServicioPorId,
-    crearUnServicios,
-    actualizarUnServicioPorId,
-    eliminarUnServicioPorId
+    traerTodosLosClientes,
+    traerUnClientePorId,
+    crearUnCliente,
+    actualizarUnClientePorId,
+    eliminarUnClientePorid
 }
 
 
