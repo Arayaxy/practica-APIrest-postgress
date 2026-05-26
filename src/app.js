@@ -1,6 +1,6 @@
 const express = require('express')
 require('dotenv').config()
-const pool = require('./config/configpull')
+// const pool = require('./config/configpull')
 
 
 const port = process.env.PORT || 3000
@@ -8,13 +8,7 @@ const port = process.env.PORT || 3000
 
 const app = express()
 
-pool.query('SELECT NOW()', (error, result) => {
-    if (error) {
-        console.log('falla la conexion postgres', error);
-        return
-    }
-    console.log('Funciona', result.rows[0]);
-})
+
 // parse application/x-www-form-urlencoded
 app.use(express.urlencoded())
 

@@ -7,7 +7,7 @@ const validateInputs = (req, res, next) => {
 
     if (!errores.isEmpty()) {
         res.status(403).json({
-            ok: false,
+            ok: false,  
             errores: errores.mapped()
         })
     }
