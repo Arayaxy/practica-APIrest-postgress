@@ -1,11 +1,11 @@
-const Servicios = require('../models/servicio.model')
+const {anadirUnCliente, cogerTodosLosClientes, cogerUnClientePorId, modificarUnClientePorId, suprimirUnClientePorid} = require('../models/servicio.model')
 
 //GET ALL SERVICES
 
-const traerTodosLosClientes = (req, res) => {
-
-
-
+const traerTodosLosClientes = async (req, res) => {
+console.log('controlador');
+const clientes =  await cogerTodosLosClientes()
+console.log(clientes);
     //TODO: acceder a la bbdd - solicitar datos
     // TODO: comprobar si hay respuesta
 

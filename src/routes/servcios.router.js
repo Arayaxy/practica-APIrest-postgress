@@ -1,6 +1,5 @@
-const express = require('express')
 const { check } = require('express-validator')
-
+const express = require('express')
 const { traerTodosLosClientes, traerUnClientePorId, crearUnCliente, actualizarUnClientePorId, eliminarUnClientePorid } = require('../controllers/servicios.controllers')
 const validateInputs = require('../middlewares/validateImputs')
 
@@ -12,14 +11,15 @@ router.get('/', [], traerTodosLosClientes)
 
 router.get('/:id', [], traerUnClientePorId)
 
-// router.post('/crear', [
-//     check('titulo', 'El nombre es obligatorio').not().isEmpty(),
-//     check('descripcion', 'La descripcion es obligatori').not().isEmpty(),
-//     check('categoria', 'La catagotia es obligatori').not().isEmpty(),
-//     validateInputs
+
+router.post('/crear', [
+    check('nombre', 'El nombre es obligatorio').not().isEmpty(),
+    check('apellido', 'La descripcion es obligatori').not().isEmpty(),
+    check('categoria', 'La catagotia es obligatori').not().isEmpty(),
+    validateInputs
 
 
-// ], crearUnServicios)
+], crearUnCliente)
 
 router.put('/actualizar/:id', actualizarUnClientePorId)
 

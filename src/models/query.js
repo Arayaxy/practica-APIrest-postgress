@@ -6,4 +6,4 @@ const query = {
     eliminarUnClientePorid: "DELETE FROM cliente WHERE cliente_id = $1 RETURNING *"
 }
 
-module.exports ={query}
+module.exports = query

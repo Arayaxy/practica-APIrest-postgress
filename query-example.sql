@@ -34,12 +34,3 @@ VALUES (2, '2026-05-21', 120.50);
 INSERT INTO pedido (cliente_id, fecha, total)
 VALUES (3, '2026-05-22', 15.75);
 
-SELECT * FROM cliente;
-
-SELECT nombre, email FROM cliente;
-
-SELECT * FROM cliente
-WHERE nombre = 'inigo';
-
-SELECT * FROM cliente
-ORDER BY nombre ASC;
