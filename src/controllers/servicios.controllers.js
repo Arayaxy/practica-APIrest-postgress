@@ -1,8 +1,8 @@
-const Servicios = require('../models/servivio.model')
+const Servicios = require('../models/servicio.model')
 
 //GET ALL SERVICES
 
-const traerTodosLosServicios = (req, res) => {
+const traerTodosLosClientes = (req, res) => {
 
 
 
@@ -23,7 +23,7 @@ const traerTodosLosServicios = (req, res) => {
 
 //GET A SERVICE BY ID
 
-const traerUnServicioPorId = async (req, res) => {
+const traerUnClientePorId = async (req, res) => {
     try {
         const { id } = req.params
 
@@ -38,7 +38,7 @@ const traerUnServicioPorId = async (req, res) => {
             res.status(404).json(
                 {
                     ok: false,
-                    msg: 'No existe servicio con ese id',
+                    msg: 'No existe cliente con ese id',
                 }
             )
             return
@@ -48,7 +48,7 @@ const traerUnServicioPorId = async (req, res) => {
         res.status(200).json(
             {
                 ok: true,
-                msg: 'obteniendo un servicio',
+                msg: 'obteniendo un cliente',
                 servicios
             }
         )
@@ -58,7 +58,7 @@ const traerUnServicioPorId = async (req, res) => {
         res.status(500).json(
             {
                 ok: false,
-                msg: 'Error obteniendo un servicio'
+                msg: 'Error obteniendo un cliente'
             }
         )
 
@@ -71,7 +71,7 @@ const traerUnServicioPorId = async (req, res) => {
 
 //CREATE A SERVICE
 
-const crearUnServicios = async (req, res) => {
+const crearUnCliente = async (req, res) => {
 
     try {
 
@@ -87,7 +87,7 @@ const crearUnServicios = async (req, res) => {
         res.status(201).json(
             {
                 ok: true,
-                msg: 'Crear Servicio',
+                msg: 'Crear cliente',
                 resp
             }
         )
@@ -99,7 +99,7 @@ const crearUnServicios = async (req, res) => {
         res.status(500).json(
             {
                 ok: false,
-                msg: 'Error al Crear un Servicio'
+                msg: 'Error al Crear un cliente'
             }
         )
 
@@ -109,7 +109,7 @@ const crearUnServicios = async (req, res) => {
 }
 //UPDATE A SERVICE BY ID
 
-const actualizarUnServicioPorId = (req, res) => {
+const actualizarUnClientePorId = (req, res) => {
 
     // TODO: obtener el body
 
@@ -126,7 +126,7 @@ const actualizarUnServicioPorId = (req, res) => {
     res.status(200).json(
         {
             ok: true,
-            msg: 'Actualizando Servicio'
+            msg: 'Actualizando cliente'
         }
     )
 
@@ -135,7 +135,7 @@ const actualizarUnServicioPorId = (req, res) => {
 
 //DELETE A SERVICE BY ID
 
-const eliminarUnServicioPorId = (req, res) => {
+const eliminarUnClientePorid= (req, res) => {
 
     //TODO: Obtener el id
 
@@ -147,7 +147,7 @@ const eliminarUnServicioPorId = (req, res) => {
     res.status(200).json(
         {
             ok: true,
-            msg: 'eliminando servicio'
+            msg: 'eliminando cliente'
         }
     )
 

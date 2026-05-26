@@ -1,7 +1,11 @@
 const express = require('express')
 const { check } = require('express-validator')
 
-const { traerTodosLosServicios, traerUnServicioPorId, crearUnServicios, actualizarUnServicioPorId, eliminarUnServicioPorId } = require('../controllers/servicios.controllers')
+const { traerTodosLosClientes,
+    traerUnClientePorId,
+    crearUnCliente,
+    actualizarUnClientePorId,
+    eliminarUnClientePorid } = require('../controllers/servicios.controllers')
 const validateInputs = require('../middlewares/validateImputs')
 
 const router = express.Router()
